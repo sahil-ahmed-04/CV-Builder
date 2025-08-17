@@ -9,14 +9,15 @@ import "./Components/Projects"
 import "./Components/Skills"
 import Skills from './Components/Skills';
 import { initialResumeData } from './Data/data';
+import Border from "./Components/Border"
 
 function App() {
   return (
     <div className="App">
-      <Introduction intro={initialResumeData.personalInfo}></Introduction>
-      <Education education={initialResumeData.education}></Education>
-      <Experience experience={initialResumeData.experience} />
-      <Skills skills={initialResumeData.skills} />
+      <Border><Introduction intro={initialResumeData.personalInfo}></Introduction></Border>
+      <Border><Education education={initialResumeData.education}></Education></Border>
+      <Border><Experience experience={initialResumeData.experience} /></Border>
+      <Border><Skills skills={initialResumeData.skills} /></Border>
     </div>
   );
 }
