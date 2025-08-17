@@ -1,11 +1,11 @@
 import "./Introduction.css"
 
-function Introduction({name, email, mobile}){
+function Introduction({intro}){
     return(
-        <>
-        <h1>{name}</h1>
-        <h3>Email:{email}, Phone no.:{mobile}</h3>
-        </>
+        <div>
+            <h1>{intro.name}</h1>
+            <strong>Email:{intro.email}, Phone no.:{intro.phone}</strong>
+        </div>
     );
 }
 

@@ -2,16 +2,21 @@ import './App.css';
 import "./Components/Education"
 import Education from './Components/Education';
 import "./Components/Experience"
+import Experience from './Components/Experience';
 import "./Components/Introduction"
 import Introduction from './Components/Introduction';
 import "./Components/Projects"
 import "./Components/Skills"
+import Skills from './Components/Skills';
+import { initialResumeData } from './Data/data';
 
 function App() {
   return (
     <div className="App">
-      <Introduction name="Sahil Ahmed" email="Sahilahmed04042003@gmail.com" mobile={9936059852}></Introduction>
-      <Education></Education>
+      <Introduction intro={initialResumeData.personalInfo}></Introduction>
+      <Education education={initialResumeData.education}></Education>
+      <Experience experience={initialResumeData.experience} />
+      <Skills skills={initialResumeData.skills} />
     </div>
   );
 }
